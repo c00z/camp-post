@@ -3,7 +3,19 @@
 }*/
 
 body {
+  background-image: url('images/map.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+}
+
+
+.wrapper {
+    text-align: center;
+}
+
+#herobutton {
+    background-color: #40c4ff;
+    margin-top: 35%;
+    border-radius: 15px;
 }
