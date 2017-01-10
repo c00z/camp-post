@@ -15,7 +15,14 @@ body {
 }
 
 #herobutton {
-    background-color: #40c4ff;
+    background-color: #8bc34a;
     margin-top: 35%;
     border-radius: 15px;
+}
+
+#logo {
+
+  height: 75px;
+  width: 250px;
+
 }
