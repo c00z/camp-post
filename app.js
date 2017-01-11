@@ -4,6 +4,7 @@ angular.module('campApp', ['ngRoute'])
        .config(config);
 
 
+// budo -P --open
 ////////////
 // ROUTES //
 ////////////

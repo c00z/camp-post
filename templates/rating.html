@@ -1,11 +1,12 @@
 
-<h2>TEST TEST TEST</h2>
+<div class="container" id="ratingpage">
+<h2>Rate Your CampSite</h2>
 
 <hr>
     <div class="row">
 
       <div class="col-md-3 col-xs-12 thumbnail">
-        <img class="img-responsive col-m-4" ng-src={{booksShowCtrl.book.image}} alt="Book image">
+        <img class="img-responsive col-m-4" ng-src={{booksShowCtrl.book.image}} alt="Site image">
         <input ng-show="editing" ng-model="booksShowCtrl.book.image" type="text" class="form-control input-md">
       </div>
 
@@ -14,15 +15,15 @@
             <li class="list-group-item">
 
 
-              <h5 class="inline-header">Title:</h5>
+              <h5 class="inline-header">Name:</h5>
               <span ng-hide="editing">{{booksShowCtrl.book.title}}</span>
               <input ng-show="editing" ng-model="booksShowCtrl.book.title" type="text" class="form-control input-md">
 
-              <h5 class="inline-header">Author:</h5>
+              <h5 class="inline-header">Location:</h5>
               <span ng-hide="editing">{{booksShowCtrl.book.author}}</span>
               <input ng-show="editing" ng-model="booksShowCtrl.book.author" type="text" class="form-control input-md">
 
-              <h5 class="inline-header">Release:</h5>
+              <h5 class="inline-header">Notes:</h5>
               <span ng-hide="editing">{{booksShowCtrl.book.releaseDate}}</span>
               <input ng-show="editing" ng-model="booksShowCtrl.book.releaseDate" type="text" class="form-control input-md">
 
@@ -31,7 +32,7 @@
 
           <!-- show while not editing -->
           <button class='btn btn-danger' ng-hide="editing" ng-click="booksShowCtrl.deleteBook(book)">Delete&nbsp;<span class="glyphicon glyphicon-trash"></span></button>
-          <button  class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Book&nbsp;<span class="glyphicon glyphicon-pencil"></span></button>
+          <button  class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Site&nbsp;<span class="glyphicon glyphicon-pencil"></span></button>
 
           <!-- show while editing -->
           <button class='btn btn-success' ng-show="editing" ng-click="booksShowCtrl.editingBook(booksShowCtrl.book); editing = false">Save&nbsp;<span class="glyphicon glyphicon-ok"></span></button>
