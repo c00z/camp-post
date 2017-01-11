@@ -31,22 +31,14 @@
 
     <!-- custom scripts -->
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="controllers/HomeController.js"></script>
 
 </head>
 
 
   <body>
-    <div>
-      <!--Logo image-->
-      <span id="logotext">C<img id="logo" src="images/tent.png">MP-POST</span>
-    </div>
 
-    <!--HomescreenButton-->
-    <div class="container">
-      <div class="wrapper">
-          <a class="waves-effect waves-light btn-large" id="herobutton"><i class="large material-icons left">shuffle</i>Share the Outdoors</a>
-      </div>
-
-    </div>
+          <div ng-view></div>  <!-- html partial content gets added here -->
+        
   </body>
 </html>
