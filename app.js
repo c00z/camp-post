@@ -17,11 +17,11 @@ function config (  $routeProvider,   $locationProvider  )  {
       controller: 'HomeController',         // uses this controller
       controllerAs: 'homeCtrl'              // with this name
     })
-    // .when('/about', {
-    //   templateUrl: 'templates/about.html',
-    //   controller: 'AboutController',
-    //   controllerAs: 'aboutCtrl'
-    // })
+    .when('/rate', {
+      templateUrl: 'templates/rating.html',
+      controller: 'RatingController',
+      controllerAs: 'ratingCtrl'
+    })
     // .when('/login', {
     //   templateUrl: 'templates/books/show.html',
     //   controller: 'BooksShowController',

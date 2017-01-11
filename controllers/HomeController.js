@@ -1,4 +1,3 @@
-console.log("sanity home check");
 angular.module('campApp')
   .controller('HomeController', HomeController);
 
