@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="campApp">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <base href="/"> required for our routing configuration -->
 
-    <title>camp</title>
-
+    <title>Camp-Post</title>
 
     <link rel="stylesheet" href="styles.css">
 
@@ -24,12 +24,18 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
+    <!-- angular -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js"></script>
+    <!-- ngRoute routing module from angular -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+
+    <!-- custom scripts -->
+    <script type="text/javascript" src="app.js"></script>
 
 </head>
 
 
   <body>
-
     <div>
       <!--Logo image-->
       <span id="logotext">C<img id="logo" src="images/tent.png">MP-POST</span>
