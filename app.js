@@ -20,7 +20,7 @@ function config (  $routeProvider,   $locationProvider  )  {
     })
     .when('/campsites', {
       templateUrl: 'templates/campsites.html',
-      controller: 'RatingController',
+      controller: 'CampsiteController',
       controllerAs: 'ratingCtrl'
     })
     // .when('/login', {
