@@ -3,7 +3,7 @@ var db = require('./models');
 var campsite_list = [{
     name: 'Yosemite',
     description: 'Vegan Sushi Bar and Izakaya',
-    address: '370 14th St, San Francisco, CA 94103',
+    location: '370 14th St, San Francisco, CA 94103',
     url: 'https://www.yelp.com/biz/shizen-vegan-sushi-bar-and-izakaya-san-francisco',
     coordinates: {
       lat: 37.768576,
@@ -12,7 +12,7 @@ var campsite_list = [{
 }, {
     name: 'Desolation',
     description: 'Chinese eatery serving vegetarian, vegan & kosher dishes.',
-    address: '2026 Irving St, San Francisco, CA 94122',
+    location: '2026 Irving St, San Francisco, CA 94122',
     url: 'http://www.shangrilavgrest.com/',
     coordinates: {
       lat: 37.763665,
@@ -21,7 +21,7 @@ var campsite_list = [{
 }, {
     name: 'Tahoe',s
     description: 'Fast-food chain offering Mexican fare, including design-your-own burritos, tacos & bowls.',
-    address: '232 O\'Farrell St, San Francisco, CA 94102',
+    location: '232 O\'Farrell St, San Francisco, CA 94102',
     url: 'https://chipotle.com/allergens',
     coordinates: {
       lat: 37.786536,
@@ -30,7 +30,7 @@ var campsite_list = [{
 }, {
     name: 'Red Rocks',
     description: 'Vegan Mexican Cuisine',
-    address: '2211 Mission St, San Francisco, CA 94110',
+    location: '2211 Mission St, San Francisco, CA 94110',
     url: 'http://gracias-madre.com/',
     coordinates: {
       lat: 37.761800,
@@ -39,7 +39,7 @@ var campsite_list = [{
 }, {
     name: 'Mexico',
     description: 'Vegan Sushi Restaurant',
-    address: '762 Valencia St, San Francisco, CA 94110',
+    location: '762 Valencia St, San Francisco, CA 94110',
     url: 'http://www.thechaya.com/',
     coordinates: {
       lat: 37.761006,

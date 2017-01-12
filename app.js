@@ -18,8 +18,8 @@ function config (  $routeProvider,   $locationProvider  )  {
       controller: 'HomeController',         // uses this controller
       controllerAs: 'homeCtrl'              // with this name
     })
-    .when('/rate', {
-      templateUrl: 'templates/rating.html',
+    .when('/campsites', {
+      templateUrl: 'templates/campsites.html',
       controller: 'RatingController',
       controllerAs: 'ratingCtrl'
     })
