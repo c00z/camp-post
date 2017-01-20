@@ -1,7 +1,7 @@
 console.log("sanity check");
 
 
-angular.module('campApp', ['ngRoute'])
+angular.module('campApp', ['ngRoute', 'ui.materialize'])
        .config(config);
 
 
