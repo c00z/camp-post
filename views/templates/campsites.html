@@ -1,0 +1,84 @@
+
+<div class="container" id="ratingpage" ng-controller="CampsiteController as campsite">
+<h2>Rate Your CampSite</h2>
+<h1>{{campsite.newCampsite.name}}</h1>
+
+<hr>
+    <div class="row">
+
+      <div class="col-md-3 col-xs-12 thumbnail">
+        <img class="img-responsive col-m-4" ng-src={{campsite.newCampsite.image}} alt="Site image">
+        <input ng-show="editing" ng-model="booksShowCtrl.book.image" type="text" class="form-control input-md">
+      </div>
+
+      <div class="col-md-9 col-xs-12">
+          <ul class="list-group form-inline">
+            <li class="list-group-item">
+
+
+              <h5 class="inline-header">Name:</h5>
+              <span ng-hide="editing">{{campsite.newCampsite.name}}</span>
+              <input ng-show="editing" ng-model="campsite.newCampsite.title" type="text" class="form-control input-md">
+
+              <h5 class="inline-header">Location:</h5>
+              <span ng-hide="editing">{{campsite.newCampsite.location}}</span>
+              <input ng-show="editing" ng-model="campsite.newCampsite.location" type="text" class="form-control input-md">
+
+              <h5 class="inline-header">Notes:</h5>
+              <span ng-hide="editing">{{booksShowCtrl.book.releaseDate}}</span>
+              <input ng-show="editing" ng-model="booksShowCtrl.book.releaseDate" type="text" class="form-control input-md">
+
+            </li>
+          </ul>
+
+          <!-- show while not editing -->
+          <button class='btn btn-danger' ng-hide="editing" ng-click="booksShowCtrl.deleteBook(book)">Delete&nbsp;<span class="glyphicon glyphicon-trash"></span></button>
+          <button  class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Site&nbsp;<span class="glyphicon glyphicon-pencil"></span></button>
+
+          <!-- show while editing -->
+          <button class='btn btn-success' ng-show="editing" ng-click="booksShowCtrl.editingBook(booksShowCtrl.book); editing = false">Save&nbsp;<span class="glyphicon glyphicon-ok"></span></button>
+          <button class='btn btn-danger' ng-show="editing" ng-click="editing = false">Cancel&nbsp;<span class="glyphicon glyphicon-remove"></span></button>
+
+         <button class='btn btn-primary' ng-href="/books/">Return Home&nbsp;<span class="glyphicon glyphicon-remove"></span></button>
+
+
+
+  </div>
+
+
+</div>
+</div>
+
+<div class="row" ng-controller="CampsiteController as campsite">>
+       <div class="col s12 m6">
+         <div class="card blue-grey darken-1">
+           <div class="card-content white-text">
+             <span class="card-title">Card Title</span>
+             <p>I am a very simple card. I am good at containing small bits of information.
+             I am convenient because I require little markup to use effectively.</p>
+           </div>
+           <ul class="list-group form-inline">
+             <li class="list-group-item">
+
+
+               <h5 class="inline-header">Name:</h5>
+               <span ng-hide="editing">{{campsite.newCampsite.name}}</span>
+               <input ng-show="editing" ng-model="campsite.newCampsite.title" type="text" class="form-control input-md">
+
+               <h5 class="inline-header">Location:</h5>
+               <span ng-hide="editing">{{campsite.newCampsite.location}}</span>
+               <input ng-show="editing" ng-model="campsite.newCampsite.location" type="text" class="form-control input-md">
+
+               <h5 class="inline-header">Notes:</h5>
+               <span ng-hide="editing">{{booksShowCtrl.book.releaseDate}}</span>
+               <input ng-show="editing" ng-model="booksShowCtrl.book.releaseDate" type="text" class="form-control input-md">
+
+             </li>
+           </ul>
+           <div class="card-action">
+             <a href="#">This is a link</a>
+             <a href="#">This is a link</a>
+           </div>
+         </div>
+       </div>
+     </div>

@@ -1,6 +1,7 @@
 console.log("sanity check");
 
-angular.module('campApp', ['ngRoute'])
+
+angular.module('campApp', ['ngRoute', 'ui.materialize'])
        .config(config);
 
 
@@ -14,13 +15,13 @@ config.$inject = ['$routeProvider', '$locationProvider'];
 function config (  $routeProvider,   $locationProvider  )  {
   $routeProvider //below is dot chaining
     .when('/', {  //when on this url go to the below url and use these controllers
-      templateUrl: 'templates/home.html',  // this "partial" html file
+      templateUrl: '/templates/home.html',  // this "partial" html file
       controller: 'HomeController',         // uses this controller
       controllerAs: 'homeCtrl'              // with this name
     })
-    .when('/rate', {
-      templateUrl: 'templates/rating.html',
-      controller: 'RatingController',
+    .when('/campsites', {
+      templateUrl: '/templates/campsites.html',
+      controller: 'CampsiteController',
       controllerAs: 'ratingCtrl'
     })
     // .when('/login', {
