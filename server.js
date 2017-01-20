@@ -1,52 +1,44 @@
-// require express and other modules
-var express = require('express'),
-    app = express();
+// SERVER-SIDE JAVASCRIPT
+console.log('Server Sanity Checks');
 
-// parse incoming urlencoded form data
-// and populate the req.body object
-//gets info from body where we usually get form data
+//require express in our app
+var express = require('express');
 var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+// generate a new express app and call it 'app'
+var app = express();
+// serve static files from public folder
+app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({ extended: true }));
+// need to add this so that we can accept request payloads
+app.use(bodyParser.json());
 
-// allow cross origin requests (optional)
-// https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
-
-/************
- * DATABASE *
- ************/
-
-var db = require('./models');
 
 /**********
  * ROUTES *
  **********/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /**********
-  * SERVER *
-  **********/
- // listen on the port that Heroku prescribes (process.env.PORT) OR port 3000
- app.listen(process.env.PORT || 3000, function() {
-     console.log('Express server is up and running on http://localhost:3000/');
+ app.get('/', function homepage (req, res) {
+   res.sendFile(__dirname + '/views/index.html');
  });
+
+ app.get('/templates/:name', function templates(req, res) {
+   var name = req.params.name;
+   console.log(name, "name");
+   res.sendFile(__dirname + '/views/templates/' + name);
+ });
+
+ // ALL OTHER ROUTES (ANGULAR HANDLES)
+ // redirect all other paths to index
+ app.get('*', function homepage (req, res) {
+   res.sendFile(__dirname + '/views/index.html');
+ });
+
+/**********
+ * SERVER *
+ **********/
+
+// listen on port 3000
+app.listen(process.env.PORT || 3000, function () {
+  console.log('Express server is running on http://localhost:3000/');
+});

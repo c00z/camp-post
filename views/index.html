@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <base href="/"> required for our routing configuration -->
+    <base href="/"> 
 
     <title>Camp-Post</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
     <!--MATERIALIZE-->
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!-- MATERIALZE -->
+    <!-- Materialize CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -30,16 +30,14 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
 
     <!-- custom scripts -->
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="controllers/HomeController.js"></script>
-    <script type="text/javascript" src="controllers/CampsiteController.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/HomeController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/CampsiteController.js"></script>
 
 </head>
 
 
   <body>
-
-          <div ng-view></div>  <!-- html partial content gets added here -->
-
+    <div ng-view></div>
   </body>
 </html>
