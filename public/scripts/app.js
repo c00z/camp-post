@@ -24,11 +24,11 @@ function config (  $routeProvider,   $locationProvider  )  {
       controller: 'CampsiteController',
       controllerAs: 'ratingCtrl'
     })
-    // .when('/login', {
-    //   templateUrl: 'templates/books/show.html',
-    //   controller: 'BooksShowController',
-    //   controllerAs: 'booksShowCtrl'
-    // })
+    .when('/login', {
+      templateUrl: 'templates/clientlogin.html',
+      // controller: 'BooksShowController',
+      // controllerAs: 'booksShowCtrl'
+    })
     .otherwise({  //if unrecoginized URL, set back to index
       redirectTo: '/'
     });
