@@ -48,37 +48,3 @@
 
 </div>
 </div>
-
-<div class="row" ng-controller="CampsiteController as campsite">>
-       <div class="col s12 m6">
-         <div class="card blue-grey darken-1">
-           <div class="card-content white-text">
-             <span class="card-title">Card Title</span>
-             <p>I am a very simple card. I am good at containing small bits of information.
-             I am convenient because I require little markup to use effectively.</p>
-           </div>
-           <ul class="list-group form-inline">
-             <li class="list-group-item">
-
-
-               <h5 class="inline-header">Name:</h5>
-               <span ng-hide="editing">{{campsite.newCampsite.name}}</span>
-               <input ng-show="editing" ng-model="campsite.newCampsite.title" type="text" class="form-control input-md">
-
-               <h5 class="inline-header">Location:</h5>
-               <span ng-hide="editing">{{campsite.newCampsite.location}}</span>
-               <input ng-show="editing" ng-model="campsite.newCampsite.location" type="text" class="form-control input-md">
-
-               <h5 class="inline-header">Notes:</h5>
-               <span ng-hide="editing">{{booksShowCtrl.book.releaseDate}}</span>
-               <input ng-show="editing" ng-model="booksShowCtrl.book.releaseDate" type="text" class="form-control input-md">
-
-             </li>
-           </ul>
-           <div class="card-action">
-             <a href="#">This is a link</a>
-             <a href="#">This is a link</a>
-           </div>
-         </div>
-       </div>
-     </div>
